@@ -63,6 +63,41 @@
     
 }
 
+// Is the object autoreleased? Why?
+
+
+//NSString *name = [NSString stringWithFormat:@"%@ %@", @"John", @"Miller"];
+// YES
+
+//NSDate *today = [NSDate date];
+// YES
+
+//NSDate *now = [NSDate new];
+// NO
+
+//NSDate *tomorrow2 = [NSDate dateWithTimeIntervalSinceNow:60*60*24];
+// NO
+
+//NSDate *nextTomorrow = [tomorrow2 copy]; // retain: 1
+// NO
+
+//NSArray *words = [@"This sentence is the bomb" componentsSeparatedByString:@" "];
+// YES
+
+//NSString *idea = [[NSString alloc] initWithString:@"Hello Ideas"];
+// NO
+
+//Car *redCar = [Car car];
+// YES
+
+//NSString *idea2 = [[[NSString alloc] initWithString:@"Hello Ideas"] autorelease];
+// YES
+
+//NSString *idea3 = [[NSString alloc] initWithString:@"Hello Ideas"];
+// NO
+//[idea3 autorelease];
+// YES
+
 
 
 @end
