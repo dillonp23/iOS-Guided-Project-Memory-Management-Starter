@@ -29,6 +29,7 @@
 
     NSLog(@"-[Person dealloc]: %@", _car);
     [_car release];
+    [super dealloc];
 }
 
 // Implement setCar with MRC

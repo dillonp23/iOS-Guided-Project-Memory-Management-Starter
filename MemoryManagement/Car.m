@@ -29,6 +29,7 @@
     NSLog(@"-[Car dealloc]: %@", self);
     // TODO: Implement dealloc with MRC
     [_make release];
+    [super dealloc]; // Tells NSobject to replace with dummy object to crash
 }
 
 - (NSString *)description
